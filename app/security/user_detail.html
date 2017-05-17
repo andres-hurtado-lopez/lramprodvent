@@ -1,0 +1,11 @@
+% rebase('main_template.html', title='Detalle Usuario')
+% include('navbar.html')
+<div class="container">
+	<h1>Modificar Usuario</h1>
+	<form action="formulario_ejemplo" method="post" accept-charset="utf-8">
+	<label>Usuario<input type="text" {{'readonly' if create == 'false' else ''}} name="user" value="{{userdata.get('user')}}"></label>
+	<label>Nombre Completo<input type="text" name="full_name" value="{{userdata.get('full_name','')}}"></label>
+	<input type="hidden" name="create" value="{{create}}">
+	<button type="submit">Guardar</button>
+	</form>
+</div>

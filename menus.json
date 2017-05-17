@@ -1,0 +1,5 @@
+{
+	"home": {"text":"Inicio", "link": "/web/home"},
+	"security": {"text":"Seguridad", "link": "/web/security"},
+	"logout": {"text":"Salir", "link": "/"}
+}

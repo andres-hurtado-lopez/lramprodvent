@@ -1,0 +1,31 @@
+<%
+rebase('main_template.html', title='Listado Usuarios')
+include('navbar.html')
+%>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Seguridad</h1>
+            <p>Control de acceso a los usuarios a la plataforma, a las funcionalidades y a los datos
+            de forma granular.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <h2>Usuarios</h2>
+                <p>Control de los usuarios que puede acceder a la plataforma. Creacion, modificacio y gestión de claves de acceso</p>
+                <p class="align-bottom"><a href="/web/security/users" class="btn btn-success">Usuarios &raquo;</a></p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <h2>Funcionalidades por Usuario</h2>
+                <p>Control por usuario de que funcionalidades puede utilizar de la plataforma</p>
+                <p><a href="/web/security/secobjs" class="btn btn-success">Objetos de Seguridad &raquo;</a></p>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-sm-6 col-md-4">
+                <h2>Datos por Usuario</h2>
+                <p>Control por usuario de que datos puede visualizar y/o manipular</p>
+                <p><a href="/web/security/datagroups" class="btn btn-success">Grupos de Datos &raquo;</a></p>
+            </div>
+            <div class="clearfix visible-md-block"></div>
+        </div>
+    </div>

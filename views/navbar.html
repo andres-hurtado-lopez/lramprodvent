@@ -1,0 +1,30 @@
+%import utils
+%appserver_name, appserver_link, pages = utils.get_menu()
+%setdefault('menu_render', True)
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{!appserver_link if menu_render else '/'}}">{{appserver_name}}</a><img class="img-responsive" src="/static/logo.png">
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    % if menu_render:
+                    %   for name, page in pages.iteritems():
+                    <li class="active"><a data-name="{{page.get('name')}}" href="{{!page.get('link')}}">{{page.get('text')}}</a></li>
+                    %   end
+                    % else:
+                    %   pass
+                    % end
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br><br><br>
